@@ -1,11 +1,17 @@
 const puppeteer = require('puppeteer-core');
+const chromium = require('chrome-aws-lambda');
 
 (async () => {
   try {
     console.log("✅ Puppeteer スクリプト開始");
 
-    // ブラウザを起動
-    const browser = await puppeteer.launch({ headless: true });
+    // Chromium のパスを設定
+    const browser = await puppeteer.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath,
+      headless: chromium.headless,
+    });
+
     const page = await browser.newPage();
 
     // 任意のURLへアクセス（ここではexample.com）
@@ -29,6 +35,7 @@ const puppeteer = require('puppeteer-core');
     // ブラウザを閉じる
     await browser.close();
     console.log("✅ Puppeteer スクリプト終了");
+
   } catch (error) {
     console.error("❌ エラーが発生しました: ", error);
   }
