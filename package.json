@@ -4,7 +4,7 @@
   "description": "Puppeteer cron job for Render",
   "main": "scrape.js",
   "scripts": {
-    "start": "npx puppeteer install && node scrape.js"
+    "start": "node scrape.js"
   },
   "dependencies": {
     "axios": "^1.8.4",
