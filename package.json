@@ -1,14 +1,12 @@
 {
   "dependencies": {
     "axios": "^1.8.4",
-    "chrome-aws-lambda": "^10.1.0",
     "iconv-lite": "^0.6.3",
-    "puppeteer": "^24.6.0",
-    "puppeteer-core": "^24.8.2",
+    "puppeteer-core": "^24.6.0",
+    "chrome-aws-lambda": "^10.0.0",
     "qs": "^6.14.0"
   },
   "scripts": {
-    "start": "npx puppeteer install",
-    "deploy": "node scrape.js"
+    "start": "node scrape.js"
   }
 }
