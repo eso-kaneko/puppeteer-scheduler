@@ -4,5 +4,9 @@
     "iconv-lite": "^0.6.3",
     "puppeteer": "^24.6.0",
     "qs": "^6.14.0"
+  },
+  "scripts": {
+    "start": "npx puppeteer install",
+    "deploy": "node scrape.js"
   }
 }
